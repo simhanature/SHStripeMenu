@@ -16,8 +16,8 @@
 		A0B4BB58173B7798003A6881 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB57173B7798003A6881 /* Default.png */; };
 		A0B4BB5A173B7798003A6881 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB59173B7798003A6881 /* Default@2x.png */; };
 		A0B4BB5C173B7798003A6881 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB5B173B7798003A6881 /* Default-568h@2x.png */; };
-		A0B4BB5F173B7798003A6881 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B4BB5E173B7798003A6881 /* ViewController.m */; };
-		A0B4BB62173B7798003A6881 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB60173B7798003A6881 /* ViewController.xib */; };
+		A0B4BB5F173B7798003A6881 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B4BB5E173B7798003A6881 /* RootViewController.m */; };
+		A0B4BB62173B7798003A6881 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB60173B7798003A6881 /* RootViewController.xib */; };
 		A0B4BB7B173B782B003A6881 /* Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB6A173B782B003A6881 /* Chat.png */; };
 		A0B4BB7C173B782B003A6881 /* Graph.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB6B173B782B003A6881 /* Graph.png */; };
 		A0B4BB7D173B782B003A6881 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB6C173B782B003A6881 /* Home.png */; };
@@ -48,9 +48,9 @@
 		A0B4BB57173B7798003A6881 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A0B4BB59173B7798003A6881 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A0B4BB5B173B7798003A6881 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A0B4BB5D173B7798003A6881 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A0B4BB5E173B7798003A6881 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A0B4BB61173B7798003A6881 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A0B4BB5D173B7798003A6881 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A0B4BB5E173B7798003A6881 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A0B4BB61173B7798003A6881 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		A0B4BB6A173B782B003A6881 /* Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat.png; sourceTree = "<group>"; };
 		A0B4BB6B173B782B003A6881 /* Graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Graph.png; sourceTree = "<group>"; };
 		A0B4BB6C173B782B003A6881 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
@@ -122,9 +122,9 @@
 				A0B4BB68173B782B003A6881 /* SHStripeMenu */,
 				A0B4BB54173B7798003A6881 /* AppDelegate.h */,
 				A0B4BB55173B7798003A6881 /* AppDelegate.m */,
-				A0B4BB5D173B7798003A6881 /* ViewController.h */,
-				A0B4BB5E173B7798003A6881 /* ViewController.m */,
-				A0B4BB60173B7798003A6881 /* ViewController.xib */,
+				A0B4BB5D173B7798003A6881 /* RootViewController.h */,
+				A0B4BB5E173B7798003A6881 /* RootViewController.m */,
+				A0B4BB60173B7798003A6881 /* RootViewController.xib */,
 				A0B4BB4C173B7798003A6881 /* Supporting Files */,
 			);
 			path = SHStripeMenuDemo;
@@ -233,7 +233,7 @@
 				A0B4BB58173B7798003A6881 /* Default.png in Resources */,
 				A0B4BB5A173B7798003A6881 /* Default@2x.png in Resources */,
 				A0B4BB5C173B7798003A6881 /* Default-568h@2x.png in Resources */,
-				A0B4BB62173B7798003A6881 /* ViewController.xib in Resources */,
+				A0B4BB62173B7798003A6881 /* RootViewController.xib in Resources */,
 				A0B4BB7B173B782B003A6881 /* Chat.png in Resources */,
 				A0B4BB7C173B782B003A6881 /* Graph.png in Resources */,
 				A0B4BB7D173B782B003A6881 /* Home.png in Resources */,
@@ -254,7 +254,7 @@
 			files = (
 				A0B4BB52173B7798003A6881 /* main.m in Sources */,
 				A0B4BB56173B7798003A6881 /* AppDelegate.m in Sources */,
-				A0B4BB5F173B7798003A6881 /* ViewController.m in Sources */,
+				A0B4BB5F173B7798003A6881 /* RootViewController.m in Sources */,
 				A0B4BB81173B782B003A6881 /* SHLineView.m in Sources */,
 				A0B4BB83173B782B003A6881 /* SHMenuItem.m in Sources */,
 				A0B4BB84173B782B003A6881 /* SHStripeMenuExecuter.m in Sources */,
@@ -274,12 +274,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A0B4BB60173B7798003A6881 /* ViewController.xib */ = {
+		A0B4BB60173B7798003A6881 /* RootViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A0B4BB61173B7798003A6881 /* en */,
 			);
-			name = ViewController.xib;
+			name = RootViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

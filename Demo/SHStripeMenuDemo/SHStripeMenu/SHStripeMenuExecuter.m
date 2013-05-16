@@ -16,7 +16,7 @@
 @interface SHStripeMenuExecuter () <UIGestureRecognizerDelegate, SHStripeMenuDelegate>
 
 @property (nonatomic, strong) SHStripeMenuViewController					*stripeMenuViewController;
-@property (nonatomic, strong) UIViewController <SHStripeMenuActionDelegate> *baseViewController;
+@property (nonatomic, strong) UIViewController <SHStripeMenuActionDelegate> *rootViewController;
 @property (nonatomic, strong) UIView										*lineView;
 @property (nonatomic, assign) BOOL											showingStripeMenu;
 
@@ -24,9 +24,9 @@
 
 @implementation SHStripeMenuExecuter
 
-- (void)setupToParentView:(UIViewController <SHStripeMenuActionDelegate> *)baseViewController
+- (void)setupToParentView:(UIViewController <SHStripeMenuActionDelegate> *)rootViewController
 {
-	_baseViewController = baseViewController;
+	_rootViewController = rootViewController;
 	[self setStripes];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
 }
@@ -46,12 +46,12 @@
 	if (_lineView == nil)
 	{
 		_lineView = [[SHLineView alloc] initWithFrame:CGRectMake(0, ([UIApplication currentSize].height - ROW_HEIGHT * numberOfItems) / 2, STRIPE_WIDTH, ROW_HEIGHT * numberOfItems)];
-		[_baseViewController.view addSubview:_lineView];
+		[_rootViewController.view addSubview:_lineView];
 		_lineView.backgroundColor = [UIColor clearColor];
 	}
 	else
 		_lineView.frame = CGRectMake(0, ([UIApplication currentSize].height - ROW_HEIGHT * numberOfItems) / 2, STRIPE_WIDTH, ROW_HEIGHT * numberOfItems);
-	[_baseViewController.view bringSubviewToFront:_lineView];
+	[_rootViewController.view bringSubviewToFront:_lineView];
 
 	UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stripesTapped:)];
 	[tapRecognizer setDelegate:self];
@@ -84,9 +84,9 @@
 	{
 		self.stripeMenuViewController			= [[SHStripeMenuViewController alloc] initWithNibName:@"SHStripeMenuViewController" bundle:nil];
 		self.stripeMenuViewController.delegate	= self;
-		[_baseViewController.view addSubview:self.stripeMenuViewController.view];
-		[_stripeMenuViewController didMoveToParentViewController:_baseViewController];
-		_stripeMenuViewController.view.frame = CGRectMake(-_baseViewController.view.frame.size.width, 0, _baseViewController.view.frame.size.width, _baseViewController.view.frame.size.height);
+		[_rootViewController.view addSubview:self.stripeMenuViewController.view];
+		[_stripeMenuViewController didMoveToParentViewController:_rootViewController];
+		_stripeMenuViewController.view.frame = CGRectMake(-_rootViewController.view.frame.size.width, 0, _rootViewController.view.frame.size.width, _rootViewController.view.frame.size.height);
 	}
 }
 
@@ -131,7 +131,7 @@
 {
 	UIView *childView = [self getMenuView];
 
-	[_baseViewController.view bringSubviewToFront:childView];
+	[_rootViewController.view bringSubviewToFront:childView];
 	// show menu
 	[UIView animateWithDuration :SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
 			animations			:^{
@@ -166,7 +166,7 @@
 
 - (void)itemSelected:(SHMenuItem *)item
 {
-	[_baseViewController stripeMenuItemSelected:item.name];
+	[_rootViewController stripeMenuItemSelected:item.name];
 }
 
 - (void)didRotate:(NSNotification *)notification

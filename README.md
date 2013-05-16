@@ -1,26 +1,25 @@
-SHStripeMenu
-===
+## SHStripeMenu
 
 It is a leftside menu which will appear either by tapping the stripes or swiping stripes to right. It can be used as an alternative to bottom tabs in iOS and utilize the maximum space to the views.
 
-How To Use:
-===
+It will work on both landscape and portrait mode.
 
-In your BaseViewController.h file, add the following code
+**How To Use:**
+
+In your RootViewController.h file, add the following code
 
 ```  objc
-//base.h
 #import "SHStripeMenuExecuter.h"
 #import "SHStripeMenuActionDelegate.h"
 ```
 
-BaseViewController should implement SHStripeMenuActionDelegate, it contains a method to makes sure that menu selection has been handled in the base controller class
+RootViewController should implement SHStripeMenuActionDelegate, it contains a method to makes sure that menu selection has been handled in the root controller class
 
 ```  objc
-@interface YourBaseViewController : UIViewController<SHStripeMenuActionDelegate>
+@interface YourRootViewController : UIViewController<SHStripeMenuActionDelegate>
 ```
 
-Add the property executer to your BaseViewController 
+Add the property executer to your RootViewController 
 
 ``` objc
 @property (nonatomic, strong) SHStripeMenuExecuter	*executer; 
@@ -60,4 +59,10 @@ Add icons for your menu as mentioned in menu_info.plist
 
 Don't forget to add "QuartzCore.framework" to your project.
 
+**Requirements**
+SHStripeMenu requires iOS 5.0+and it uses ARC. It is built using Xcode 4.5+. It is tested on iPhone 3GS(iOS 6.1). It is tested on iPhone simulators for iOS5.0+
+
 Feel free to fork and update the library
+
+**License**
+The MIT License
