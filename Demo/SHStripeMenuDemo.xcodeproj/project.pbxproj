@@ -31,6 +31,10 @@
 		A0B4BB85173B782B003A6881 /* SHStripeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B4BB79173B782B003A6881 /* SHStripeMenuViewController.m */; };
 		A0B4BB86173B782B003A6881 /* SHStripeMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B4BB7A173B782B003A6881 /* SHStripeMenuViewController.xib */; };
 		A0B4BB89173B7A4D003A6881 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B4BB87173B7A3A003A6881 /* QuartzCore.framework */; };
+		A0B7059C1744CB510062C19A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B7059A1744CB510062C19A /* NewsViewController.m */; };
+		A0B7059D1744CB510062C19A /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B7059B1744CB510062C19A /* NewsViewController.xib */; };
+		A0B705A11744CF9F0062C19A /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B7059F1744CF9F0062C19A /* SocialViewController.m */; };
+		A0B705A21744CF9F0062C19A /* SocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B705A01744CF9F0062C19A /* SocialViewController.xib */; };
 		A0E2D687173BAB67001DD98C /* UIApplication+AppDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E2D686173BAB67001DD98C /* UIApplication+AppDimensions.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,12 @@
 		A0B4BB79173B782B003A6881 /* SHStripeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHStripeMenuViewController.m; sourceTree = "<group>"; };
 		A0B4BB7A173B782B003A6881 /* SHStripeMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHStripeMenuViewController.xib; sourceTree = "<group>"; };
 		A0B4BB87173B7A3A003A6881 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A0B705991744CB500062C19A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		A0B7059A1744CB510062C19A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A0B7059B1744CB510062C19A /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		A0B7059E1744CF9E0062C19A /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		A0B7059F1744CF9F0062C19A /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		A0B705A01744CF9F0062C19A /* SocialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
 		A0E2D685173BAB67001DD98C /* UIApplication+AppDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppDimensions.h"; sourceTree = "<group>"; };
 		A0E2D686173BAB67001DD98C /* UIApplication+AppDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppDimensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +132,12 @@
 				A0B4BB68173B782B003A6881 /* SHStripeMenu */,
 				A0B4BB54173B7798003A6881 /* AppDelegate.h */,
 				A0B4BB55173B7798003A6881 /* AppDelegate.m */,
+				A0B705991744CB500062C19A /* NewsViewController.h */,
+				A0B7059A1744CB510062C19A /* NewsViewController.m */,
+				A0B7059B1744CB510062C19A /* NewsViewController.xib */,
+				A0B7059E1744CF9E0062C19A /* SocialViewController.h */,
+				A0B7059F1744CF9F0062C19A /* SocialViewController.m */,
+				A0B705A01744CF9F0062C19A /* SocialViewController.xib */,
 				A0B4BB5D173B7798003A6881 /* RootViewController.h */,
 				A0B4BB5E173B7798003A6881 /* RootViewController.m */,
 				A0B4BB60173B7798003A6881 /* RootViewController.xib */,
@@ -242,6 +258,8 @@
 				A0B4BB80173B782B003A6881 /* menu_info.plist in Resources */,
 				A0B4BB82173B782B003A6881 /* SHMenuCell.xib in Resources */,
 				A0B4BB86173B782B003A6881 /* SHStripeMenuViewController.xib in Resources */,
+				A0B7059D1744CB510062C19A /* NewsViewController.xib in Resources */,
+				A0B705A21744CF9F0062C19A /* SocialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,8 @@
 				A0B4BB84173B782B003A6881 /* SHStripeMenuExecuter.m in Sources */,
 				A0B4BB85173B782B003A6881 /* SHStripeMenuViewController.m in Sources */,
 				A0E2D687173BAB67001DD98C /* UIApplication+AppDimensions.m in Sources */,
+				A0B7059C1744CB510062C19A /* NewsViewController.m in Sources */,
+				A0B705A11744CF9F0062C19A /* SocialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

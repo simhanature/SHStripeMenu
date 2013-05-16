@@ -7,10 +7,15 @@
 //
 
 #import "RootViewController.h"
+#import "NewsViewController.h"
+#import "SocialViewController.h"
 
 @interface RootViewController ()
 
-@property (nonatomic, strong) SHStripeMenuExecuter *executer;	// SHStripeMenu code
+@property (nonatomic, strong) SHStripeMenuExecuter * executer;	// SHStripeMenu code
+@property (nonatomic, strong) NewsViewController * newsViewController;
+@property (nonatomic, strong) SocialViewController * socialViewController;
+
 
 @end
 
@@ -33,20 +38,35 @@
 	// Dispose of any resources that can be recreated.
 }
 
+-(void)switchToView:(NSString*)name
+{
+    if ([name isEqualToString:@"news"]) {
+        if (_newsViewController==nil) {
+            _newsViewController = [[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil];
+            [self.view addSubview:_newsViewController.view];
+        }
+        [self.view bringSubviewToFront:_newsViewController.view];
+    }
+    else {
+        if (_socialViewController==nil) {
+            _socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialViewController" bundle:nil];
+            [self.view addSubview:_socialViewController.view];
+        }
+        [self.view bringSubviewToFront:_socialViewController.view];
+    }
+    
+}
+
 // SHStripeMenu code
 - (void)stripeMenuItemSelected:(NSString *)menuName
 {
 	if ([menuName isEqualToString:@"home"])
 	{
-		// 
+		[self switchToView:@"news"];
 	}
-	else if ([menuName isEqualToString:@"graph"])
+	else 
 	{
-		// 
-	}
-	else if ([menuName isEqualToString:@"chat"])
-	{
-		// 
+		[self switchToView:@"social"];
 	}
 }
 

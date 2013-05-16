@@ -167,6 +167,7 @@
 - (void)itemSelected:(SHMenuItem *)item
 {
 	[_rootViewController stripeMenuItemSelected:item.name];
+    [self setStripesView];
 }
 
 - (void)didRotate:(NSNotification *)notification
