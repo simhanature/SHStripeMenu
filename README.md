@@ -5,8 +5,10 @@ It is a leftside menu which will appear either by tapping the stripes or swiping
 It will work on both landscape and portrait mode.
 
 **Screenshots**
+
 ![Stripe menu](https://raw.github.com/simhanature/SHStripeMenu/master/screenshots/StripeMenu.png "Stripe Menu")
 ![Stripe menu](https://raw.github.com/simhanature/SHStripeMenu/master/screenshots/StripesOverContent.png "Stripe Menu Over Content")
+
 
 **How To Use:**
 
