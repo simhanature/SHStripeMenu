@@ -1,6 +1,6 @@
 ## SHStripeMenu
 
-It is a leftside menu which will appear either by tapping the stripes or swiping stripes to right. It can be used as an alternative to bottom tabs in iOS and utilize the maximum space to the views.
+It is a leftside menu which will appear either by tapping the stripes or swiping stripes to right. It can be used as an alternative to bottom tabs in the application and gain maximum space to display the content.
 
 It will work on both landscape and portrait mode.
 
