@@ -11,6 +11,6 @@
 
 @interface SHStripeMenuExecuter : NSObject
 
-- (void)setupToParentView:(UIViewController<SHStripeMenuActionDelegate> *)baseViewController;
+- (void)setupToParentView:(UIViewController<SHStripeMenuActionDelegate> *)rootViewController;
 
 @end
