@@ -36,9 +36,10 @@
 - (void)setupGestures
 {
 	UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidePanel:)];
-
+    [gestureRecognizer setCancelsTouchesInView:NO];
 	[gestureRecognizer setDelegate:self];
 	[self.view addGestureRecognizer:gestureRecognizer];
+    
 	UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipeReceived:)];
 	[panRecognizer setDelegate:self];
 	[self.view addGestureRecognizer:panRecognizer];
